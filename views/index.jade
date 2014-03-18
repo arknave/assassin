@@ -1,8 +1,9 @@
 extends layout
 
 block content
-    h1 LASA Assassins
-    p Welcome to LASA Assassins
+    h1 LASA Marker Tag
+    h2 Fun Time Educational Rules
+    p Don't forget to send one of the line leaders a text when you introduce a friend to color! Also make sure you always color between the lines and below the face.
     h2 Remaining Teams
     table
         tr
@@ -14,7 +15,7 @@ block content
                 - var mac = team.mactive ? '' : 'dead'
                 td.captain(class=cac)= team.captain 
                 td(class=mac)= team.mate
-    h2 Recent Kills
+    h2 Recent Colorings
     ul
         each kill in kills
-            li= kill.killed + ' is sleeping with the fishes'
+            li= kill.killed + ' has had an accident with colour'
