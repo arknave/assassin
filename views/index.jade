@@ -1,21 +1,35 @@
-extends layout
-
-block content
+doctype html
+html
+  head
+    title Senior Sunshine Happy Academic Fun Time (Senior SHAFT)
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      p Certified colorful and fun by 
+        a(href='https://twitter.com/AISD_Alex/status/446081612300574720') Alex Sanchez (AISD_Alex)
+    hr 
     h1 LASA Marker Tag
     h2 Fun Time Educational Rules
     p Don't forget to send one of the line leaders a text when you introduce a friend to color! Also make sure you always color between the lines and below the face.
     h2 Remaining Teams
     table
+      tr
+        th Captain
+        th Partner
+      each team in teams
         tr
-            th Captain
-            th Partner
-        each team in teams
-            tr
-                - var cac = team.cactive ? '' : 'dead'
-                - var mac = team.mactive ? '' : 'dead'
-                td.captain(class=cac)= team.captain 
-                td(class=mac)= team.mate
+          - var cac = team.cactive ? '' : 'dead'
+          - var mac = team.mactive ? '' : 'dead'
+          td.captain(class=cac)= team.captain 
+          td(class=mac)= team.mate
     h2 Recent Colorings
     ul
-        each kill in kills
-            li= kill.killed + ' has had an accident with colour'
+      each kill in kills
+        li= kill.killed + ' has had an accident with colour'
+    hr
+    footer
+      p Created by Arnav Sastry
+      p
+        a(href='http://snapcracklezine.blogspot.com/2010/04/front-covers.html') Background image 
+      | by 2010 Ezine Class
+
